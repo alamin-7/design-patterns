@@ -10,6 +10,7 @@ public class ClientClass {
 
         System.out.println(samsung.toString());
 
+
         System.out.println(oneplus.toString());
     }
 }
