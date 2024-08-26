@@ -1,13 +1,17 @@
 package SingleTonDesignPattern;
 
 public class SingleTonObject {
-    private static SingleTonObject singleTonObject = new SingleTonObject();
+    private static SingleTonObject singleTonObject;
 
     private SingleTonObject(){
 
     }
 
-    public static SingleTonObject getSingleTonObjectInstance(){
+    public static synchronized SingleTonObject getSingleTonObjectInstance(){
+
+        if(singleTonObject == null){
+            singleTonObject = new SingleTonObject();
+        }
         return singleTonObject;
     }
 
